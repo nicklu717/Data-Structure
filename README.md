@@ -1,4 +1,4 @@
-# C/C++
+# Notes for C/C++
 
 ## Compile Methods on MacOS
 
