@@ -13,8 +13,9 @@ class SparseMatrix {
     public:
         SparseMatrix();
         SparseMatrix transpose();
+        SparseMatrix fastTranspose();
 
     private:
-        int numberOfRow, numberOfColumn, numberOfTerm;
+        int numberOfRows, numberOfColumns, numberOfTerms;
         MatrixTerm matrixTerms[];
 };
