@@ -15,6 +15,6 @@ class SparseMatrix {
         SparseMatrix transpose();
 
     private:
-        int rows, columns, terms;
+        int numberOfRow, numberOfColumn, numberOfTerm;
         MatrixTerm matrixTerms[];
 };
