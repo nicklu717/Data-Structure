@@ -26,7 +26,7 @@ SparseMatrix SparseMatrix::transpose() {
     };
 
     return newMatrix;
-}
+};
 
 SparseMatrix SparseMatrix::fastTranspose() {
 
@@ -44,16 +44,16 @@ SparseMatrix SparseMatrix::fastTranspose() {
 
         for (i = 0; i < numberOfColumns; i++) {
             rowNumbers[i] = 0;
-        }
+        };
 
         for (i = 0; i < numberOfTerms; i++) {
             rowNumbers[matrixTerms[i].column]++;
-        }
+        };
 
         rowStartIndexes[0] = 0;
         for (i = 1; i < numberOfColumns; i++) {
-            rowStartIndexes[i] = rowStartIndexes[i - 1] + rowNumbers[i];
-        }
+            rowStartIndexes[i] = rowStartIndexes[i - 1] + rowNumbers[i - 1];
+        };
 
         int j;
         for (i = 0; i < numberOfTerms; i++) {
@@ -65,11 +65,11 @@ SparseMatrix SparseMatrix::fastTranspose() {
             newMatrix.matrixTerms[j].value = matrixTerms[i].value;
 
             rowStartIndexes[matrixTerms[i].column]++;
-        }
-    }
+        };
+    };
     
     delete [] rowNumbers;
     delete [] rowStartIndexes;
 
     return newMatrix;
-}
+};
