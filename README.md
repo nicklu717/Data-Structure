@@ -14,9 +14,8 @@ $ ./a.out
 ```
 #### VSCode Extension:
 ```
-1. C/C++
-2. C/C++ Clang Command Adapter
-3. Code Runner(Run code: [ctrl]+[option]+[n])
+1. C/C++ Clang Command Adapter
+2. Code Runner(Run code: [ctrl]+[option]+[n])
 ```
 
 ## Basics for C
