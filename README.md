@@ -1,6 +1,6 @@
 # Notes for C/C++
 
-## Compile Methods on MacOS
+## Compile Methods on macOS
 
 #### Terminal:
 ``` Console
