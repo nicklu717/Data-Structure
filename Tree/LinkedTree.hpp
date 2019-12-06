@@ -8,6 +8,12 @@ class TreeNode {
         TreeNode *leftNode;
         int value;
         TreeNode *rightNode;
+};
+
+class LinkedTree {
+    
+    private:
+        TreeNode *rootNode;
 
     public:
 };
