@@ -5,8 +5,8 @@ class TreeNode {
     friend class LinkedTree;
 
     private:
-        TreeNode *leftNode;
         int value;
+        TreeNode *leftNode;
         TreeNode *rightNode;
 };
 
@@ -16,4 +16,7 @@ class LinkedTree {
         TreeNode *rootNode;
 
     public:
+        void inorderTraversal(TreeNode *currentNode);
+        void preorderTraversal(TreeNode *currentNode);
+        void postorderTraversal(TreeNode *currentNode);
 };
