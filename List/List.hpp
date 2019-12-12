@@ -10,4 +10,5 @@ class List {
         List();
         bool isEmpty();
         void push(T value);
+        T get(int index);
 };
