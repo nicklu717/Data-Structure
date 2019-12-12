@@ -7,4 +7,6 @@ class List {
     public:
         List();
         Node<T>* head;
+        int count;
+        bool isEmpty();
 };
