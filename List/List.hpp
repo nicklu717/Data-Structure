@@ -5,8 +5,9 @@ template<class T>
 class List {
 
     public:
-        List();
         Node<T>* head;
         int count;
+        List();
         bool isEmpty();
+        void push(T value);
 };
