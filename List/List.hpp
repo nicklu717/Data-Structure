@@ -10,6 +10,7 @@ class List {
         List();
         bool isEmpty();
         void push(T value);
+        T pop();
         void printOut();
         T get(int index);
 };

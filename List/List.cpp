@@ -26,6 +26,22 @@ void List<T>::push(T _value) {
 }
 
 template <class T>
+T List<T>::pop() {
+
+    Node<T>* headNode = head;
+    int value;
+
+    if(headNode) {
+        value = headNode->value;
+        head = headNode->nextNode;
+        delete headNode;
+        count--;
+    }
+
+    return value;
+}
+
+template <class T>
 void List<T>::printOut() {
 
     Node<T>* currentNode = head;
@@ -65,6 +81,9 @@ int main() {
     cout << list.get(1) << endl;
     list.printOut();
     cout << list.isEmpty() << endl;
+
+    cout << list.pop() << endl;
+    list.printOut();
 
     return 0;
 }
