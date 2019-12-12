@@ -42,6 +42,55 @@ T List<T>::pop() {
 }
 
 template <class T>
+void List<T>::append(T _value) {
+    
+    Node<T>* newNode = new Node<T>(_value);
+
+    if(!head) {
+
+        head = newNode;
+
+    } else {
+
+        Node<T>* currentNode = head;
+
+        while(currentNode->nextNode) {
+            currentNode = currentNode->nextNode;
+        }
+
+        currentNode->nextNode = newNode;
+    }
+
+    count++;
+}
+
+template <class T>
+T List<T>::drop() {
+
+    int value;
+
+    if(head) {
+
+        Node<T>* currentNode = head;
+        Node<T>* previousNode = NULL;
+
+        while(currentNode->nextNode) {
+            previousNode = currentNode;
+            currentNode = currentNode->nextNode;
+        }
+
+        previousNode->nextNode = NULL;
+
+        value = currentNode->value;
+        delete currentNode;
+
+        count--;
+    }
+
+    return value;
+}
+
+template <class T>
 void List<T>::printOut() {
 
     Node<T>* currentNode = head;
@@ -82,8 +131,17 @@ int main() {
     list.printOut();
     cout << list.isEmpty() << endl;
 
-    cout << list.pop() << endl;
+    cout << list.drop() << endl;
     list.printOut();
+    cout << "count: " << list.count << endl << endl;
+    
+    cout << list.drop() << endl;
+    list.printOut();
+    cout << "count: " << list.count << endl << endl;
+
+    cout << list.drop() << endl;
+    list.printOut();
+    cout << "count: " << list.count << endl << endl;
 
     return 0;
 }
