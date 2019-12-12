@@ -21,6 +21,8 @@ void List<T>::push(T _value) {
 
     newNode->nextNode = head;
     head = newNode;
+
+    count++;
 }
 
 template <class T>
