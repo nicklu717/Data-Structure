@@ -1,8 +1,8 @@
+#include "BinaryTree.hpp"
 #include <iostream>
-#include "LinkedTree.hpp"
 using namespace std;
 
-void LinkedTree::inorderTraversal(TreeNode *currentNode) {
+void BinaryTree::inorderTraversal(BinaryNode *currentNode) {
 
     if (currentNode) {
         inorderTraversal(currentNode->leftNode);
@@ -11,7 +11,7 @@ void LinkedTree::inorderTraversal(TreeNode *currentNode) {
     }
 }
 
-void LinkedTree::preorderTraversal(TreeNode *currentNode) {
+void BinaryTree::preorderTraversal(BinaryNode *currentNode) {
 
     if (currentNode) {
         cout << currentNode->value << endl;
@@ -20,7 +20,7 @@ void LinkedTree::preorderTraversal(TreeNode *currentNode) {
     }
 }
 
-void LinkedTree::postorderTraversal(TreeNode *currentNode) {
+void BinaryTree::postorderTraversal(BinaryNode *currentNode) {
     
     if (currentNode) {
         inorderTraversal(currentNode->leftNode);
