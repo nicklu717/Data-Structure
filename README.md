@@ -23,6 +23,8 @@ $ ./a.out
 ### Loop
 *for* loop
 ``` C
+#include <stdio.h>
+
 int main() {
 
     for(int i = 0; i < 10; i++) {
@@ -38,6 +40,8 @@ int main() {
 ```
 *while* loop
 ``` C
+#include <stdio.h>
+
 int main() {
 
     int a = 0;
@@ -52,6 +56,8 @@ int main() {
 ```
 *do-while* loop
 ``` C
+#include <stdio.h>
+
 int main() {
 
     int a = 0;
@@ -68,6 +74,8 @@ int main() {
 
 ### Pointer
 ``` C
+#include <stdio.h>
+
 void printArray(int *pointer, int count) {
     
     for(int i = 0; i < rows; i++) {
@@ -92,6 +100,9 @@ int main() {
 
 ### Structure
 ``` C
+#include <stdio.h>
+#include <string.h>
+
 // Defining
 struct Human {
     char name[10];
@@ -122,7 +133,3 @@ int main() {
 ```
 
 ## Basics for C++
-
-.h
-https://kaiching.org/pydoing/cpp-guide/unit-13-header.html
-https://blog.techbridge.cc/2017/09/30/cpp-header-guard/
