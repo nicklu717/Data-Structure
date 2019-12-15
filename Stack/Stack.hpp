@@ -9,6 +9,7 @@ class Stack {
         T pop();
 
         Stack();
+        Stack(int size);
         ~Stack();
 
     private:
