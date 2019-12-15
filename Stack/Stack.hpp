@@ -3,6 +3,7 @@ class Stack {
 
     public:
         int count;
+        int size;
 
         void push(T);
         T get();
