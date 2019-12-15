@@ -9,8 +9,7 @@ class Queue {
         T get();
         T pop();
 
-        Queue();
-        Queue(int size);
+        Queue(int size = 100);
         ~Queue();
 
     private:

@@ -27,18 +27,11 @@ T Stack<T>::pop() {
 }
 
 template <class T>
-Stack<T>::Stack() {
-
-    array = new T[100];
-    size = 100;
-    count = 0;
-}
-
-template <class T>
 Stack<T>::Stack(int _size) {
 
-    array = new T[_size];
     size = _size;
+    array = new T[size];
+    
     count = 0;
 }
 
