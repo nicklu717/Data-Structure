@@ -2,7 +2,8 @@
 #include <iostream>
 using namespace std;
 
-void BinaryTree::inorderTraversal(BinaryNode *currentNode) {
+template <class T>
+void BinaryTree<T>::inorderTraversal(BinaryNode<T> *currentNode) {
 
     if (currentNode) {
         inorderTraversal(currentNode->leftNode);
@@ -11,7 +12,8 @@ void BinaryTree::inorderTraversal(BinaryNode *currentNode) {
     }
 }
 
-void BinaryTree::preorderTraversal(BinaryNode *currentNode) {
+template <class T>
+void BinaryTree<T>::preorderTraversal(BinaryNode<T> *currentNode) {
 
     if (currentNode) {
         cout << currentNode->value << endl;
@@ -20,7 +22,8 @@ void BinaryTree::preorderTraversal(BinaryNode *currentNode) {
     }
 }
 
-void BinaryTree::postorderTraversal(BinaryNode *currentNode) {
+template <class T>
+void BinaryTree<T>::postorderTraversal(BinaryNode<T> *currentNode) {
     
     if (currentNode) {
         inorderTraversal(currentNode->leftNode);
