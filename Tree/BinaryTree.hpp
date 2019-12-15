@@ -1,22 +1,19 @@
-class BinaryTree;
-
+template <class T>
 class BinaryNode {
 
-    friend class BinaryTree;
-
-    private:
-        int value;
-        BinaryNode *leftNode;
-        BinaryNode *rightNode;
+    public:
+        T value;
+        BinaryNode<T> *leftNode;
+        BinaryNode<T> *rightNode;
 };
 
+template <class T>
 class BinaryTree {
     
-    private:
-        BinaryNode *rootNode;
-
     public:
-        void inorderTraversal(BinaryNode *currentNode);
-        void preorderTraversal(BinaryNode *currentNode);
-        void postorderTraversal(BinaryNode *currentNode);
+        BinaryNode<T> *rootNode;
+
+        void inorderTraversal(BinaryNode<T> *currentNode);
+        void preorderTraversal(BinaryNode<T> *currentNode);
+        void postorderTraversal(BinaryNode<T> *currentNode);
 };
