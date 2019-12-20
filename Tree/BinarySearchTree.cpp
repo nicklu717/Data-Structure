@@ -12,7 +12,6 @@ BinarySearchTree<T>::~BinarySearchTree() {
 
 template <class T>
 bool BinarySearchTree<T>::search(T _key) {
-
     return root ? search(_key, root) : false;
 }
 
