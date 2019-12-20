@@ -130,6 +130,7 @@ int main() {
     for(int i = 0; i < count; i++) {
         cout << minHeap->pop() << endl;
     }
+    // 1 2 2 4 5 6 8 16
 
     delete minHeap;
 

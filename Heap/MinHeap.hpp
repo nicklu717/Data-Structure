@@ -8,8 +8,8 @@ class MinHeap {
         MinHeap(int _size = 1000);
         ~MinHeap();
         
-        int getCount();
         int getSize();
+        int getCount();
         void push(T _value);
         T get();
         T pop();
