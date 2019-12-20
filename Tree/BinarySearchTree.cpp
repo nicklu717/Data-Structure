@@ -31,11 +31,13 @@ template <class T>
 void BinarySearchTree<T>::insert(T _key) {
 
     if(!root) {
+
         root = new BinaryNode<T>(_key);
-        return;
+        
+    } else {
+
+        insert(_key, root);
     }
-    
-    insert(_key, root);
 }
 
 template <class T>
