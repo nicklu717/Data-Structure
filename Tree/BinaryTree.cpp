@@ -6,9 +6,9 @@ template <class T>
 void BinaryTree<T>::inorderTraversal(BinaryNode<T> *currentNode) {
 
     if (currentNode) {
-        inorderTraversal(currentNode->leftNode);
+        inorderTraversal(currentNode->left);
         cout << currentNode->value << endl;
-        inorderTraversal(currentNode->rightNode);
+        inorderTraversal(currentNode->right);
     }
 }
 
@@ -17,8 +17,8 @@ void BinaryTree<T>::preorderTraversal(BinaryNode<T> *currentNode) {
 
     if (currentNode) {
         cout << currentNode->value << endl;
-        inorderTraversal(currentNode->leftNode);
-        inorderTraversal(currentNode->rightNode);
+        inorderTraversal(currentNode->left);
+        inorderTraversal(currentNode->right);
     }
 }
 
@@ -26,8 +26,8 @@ template <class T>
 void BinaryTree<T>::postorderTraversal(BinaryNode<T> *currentNode) {
     
     if (currentNode) {
-        inorderTraversal(currentNode->leftNode);
-        inorderTraversal(currentNode->rightNode);
+        inorderTraversal(currentNode->left);
+        inorderTraversal(currentNode->right);
         cout << currentNode->value << endl;
     }
 }
