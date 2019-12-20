@@ -33,17 +33,23 @@ void BinarySearchTree<T>::insert(T _key) {
 
 template <class T>
 void BinarySearchTree<T>::printInOrder() {
+
     printInOrder(root);
+    cout << endl;
 }
 
 template <class T>
 void BinarySearchTree<T>::printPreOrder() {
+
     printPreOrder(root);
+    cout << endl;
 }
 
 template <class T>
 void BinarySearchTree<T>::printPostOrder() {
+    
     printPostOrder(root);
+    cout << endl;
 }
 
 template <class T>
