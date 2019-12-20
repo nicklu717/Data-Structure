@@ -7,12 +7,12 @@ template <class T>
 class BinaryNode {
 
     public:
-        T value;
+        T key;
         BinaryNode *left;
         BinaryNode *right;
 
-        BinaryNode(int _value) {
-            value = _value;
+        BinaryNode(int _key) {
+            key = _key;
             left = NULL;
             right = NULL;
         }
