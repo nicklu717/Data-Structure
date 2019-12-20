@@ -7,14 +7,15 @@ template <class T>
 class BinarySearchTree {
     
     public:
-        void insert(T _key);
-        bool search(T _key);
-    
         BinarySearchTree();
         ~BinarySearchTree();
+        bool search(T _key);
+        void insert(T _key);
 
     protected:
         BinaryNode<T> *root;
+
+        void insert(T _key, BinaryNode<T> *_node);
 };
 
 #endif
