@@ -1,4 +1,7 @@
 #include "BinarySearchTree.hpp"
+#include <iostream>
+
+using namespace std;
 
 template <class T>
 BinarySearchTree<T>::BinarySearchTree() {
@@ -26,6 +29,21 @@ void BinarySearchTree<T>::insert(T _key) {
 
         insert(_key, root);
     }
+}
+
+template <class T>
+void BinarySearchTree<T>::printInOrder() {
+    printInOrder(root);
+}
+
+template <class T>
+void BinarySearchTree<T>::printPreOrder() {
+    printPreOrder(root);
+}
+
+template <class T>
+void BinarySearchTree<T>::printPostOrder() {
+    printPostOrder(root);
 }
 
 template <class T>
@@ -70,5 +88,38 @@ void BinarySearchTree<T>::insert(T _key, BinaryNode<T> *_node) {
 
             insert(_key, _node->right);
         }
+    }
+}
+
+template <class T>
+void BinarySearchTree<T>::printInOrder(BinaryNode<T> *_node) {
+
+    if(_node) {
+
+        printInOrder(_node->left);
+        cout << _node->key << " ";
+        printInOrder(_node->right);
+    }
+}
+
+template <class T>
+void BinarySearchTree<T>::printPreOrder(BinaryNode<T> *_node) {
+
+    if(_node) {
+
+        cout << _node->key << " ";
+        printInOrder(_node->left);
+        printInOrder(_node->right);
+    }
+}
+
+template <class T>
+void BinarySearchTree<T>::printPostOrder(BinaryNode<T> *_node) {
+
+    if(_node) {
+
+        printInOrder(_node->left);
+        printInOrder(_node->right);
+        cout << _node->key << " ";
     }
 }
