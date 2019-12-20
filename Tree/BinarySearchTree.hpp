@@ -15,6 +15,7 @@ class BinarySearchTree {
     protected:
         BinaryNode<T> *root;
 
+        bool search(T _key, BinaryNode<T> *_node);
         void insert(T _key, BinaryNode<T> *_node);
 };
 

@@ -13,18 +13,7 @@ BinarySearchTree<T>::~BinarySearchTree() {
 template <class T>
 bool BinarySearchTree<T>::search(T _key) {
 
-    if(!root) {
-        return false;
-    }
-
-    if(_key == root->key) {
-
-        return true;
-
-    } else {
-
-        return (_key < root->key) ? root->left->search(_key) : root->right->search(_key);
-    }
+    return root ? search(_key, root) : false;
 }
 
 template <class T>
@@ -37,6 +26,23 @@ void BinarySearchTree<T>::insert(T _key) {
     } else {
 
         insert(_key, root);
+    }
+}
+
+template <class T>
+bool BinarySearchTree<T>::search(T _key, BinaryNode<T> *_node) {
+
+    if(_key < _node->key) {
+
+        return _node->left ? search(_key, _node->left) : false;
+
+    } else if(_key > _node->key) {
+
+        return _node->right ? search(_key, _node->right) : false;
+
+    } else {
+
+        return true;
     }
 }
 
